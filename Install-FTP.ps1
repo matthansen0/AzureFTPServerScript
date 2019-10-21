@@ -1,5 +1,11 @@
-﻿##Format data disk 
+## VM to be pre-created in Azure with an additional data disk, and an NSG with TCP 21, 1025-1026 opened
+## After the install is complete, you need to add the public IP of the VM into the "FTP Firewall Support" configuration in IIS then reboot.
+
+
+## Enable Disk Performance Counters 
 diskperf -y
+
+#Format Data Disk and assign drive letter F
 get-disk | where partitionstyle -EQ 'raw' | `
 Initialize-Disk -PartitionStyle MBR -PassThru | `
 New-Partition -DriveLetter "F" -UseMaximumSize | `
