@@ -1,3 +1,4 @@
+##Script v1.0, Matt Hansen
 ## VM to be pre-created in Azure with an additional data disk, and an NSG with TCP 21, 1025-1026 opened
 ## After the install is complete, you need to add the public IP of the VM into the "FTP Firewall Support" configuration in IIS then reboot.
 
